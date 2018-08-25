@@ -24,10 +24,10 @@ while(coO<=noO) {
 	coO++;
 }
  csp=1;
-while(csp<=nsp) {
-	System.out.print(" ");
-	csp++;
-}
+//while(csp<=nsp) {
+//	System.out.print(" ");
+//	csp++;
+//}
 System.out.println();
 noO=noO+2;
 nsp--;
