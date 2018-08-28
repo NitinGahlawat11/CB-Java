@@ -9,38 +9,49 @@ public class Sample
 
     public static void main(String args[]) 
     {
-    	int n =sc.nextInt();
-    	int nr=(2*n)-1;
-    	int nst=1;
-    	int row=1;
-    	int val;
-    	while(row<=nr) {
-    		if(row<=nr/2) {
-    			val=row;
-    		}
-    		else {
-    			val=nr-row+1;
-    		}
-    		int cst=1;
-    		while(cst<=nst) {
-    			if(cst%2==0) {
-    				System.out.print("*");
-    			}
-    			else {
-    				System.out.print(val);
-    			}
-    		cst++;
-    		}
-    		System.out.println();
-    		if(row<=nr/2) {
-    			nst+=2;
-    		}
-    		else {
-    			nst-=2;
-    		}
-    		row++;
-    		
-    	}
-    	
+    	int[]values=	takeInp();
+    int[]res=	allindices(values,0,5,0);
+    for(int i=0;i<res.length;i++) {
+    	System.out.println(res[i]);
+    }	
     }
-}
+
+    public static int[] takeInp() {
+    	System.out.println("enter the elements you want inside yoour array");
+    	int n= sc.nextInt();
+    	int[]arr=new int[n];
+    	for(int i=0;i<arr.length;i++) {
+    	System.out.println("enter the value at "+i+"index");
+    	arr[i]=sc.nextInt();
+    	
+    	}
+    	return arr;
+    	}
+    
+    
+    public static int[] allindices(int []arr,int si,int data, int count) {
+    	
+    	if(si==arr.length) {
+    	int[]base= new int[count];
+    	return base;
+    	}
+    int[]indices=null;
+    if(arr[si]==data) {
+    	indices=allindices(arr,si+1,data,count+1);
+    }
+    else {
+    	indices=allindices(arr,si+1,data,count);
+    }
+    
+    if(arr[si]==data) {
+    	indices[count]=si;
+    }
+    
+    return indices;
+    }
+    
+    // [5,1,5,22,5,5,1] ,1 =>[1,6]
+    
+    
+    }
+
