@@ -10,33 +10,30 @@ public class Sample
     public static void main(String args[]) 
     {
     
- int n=sc.nextInt();
- int row=1;
- int nst=1;
- int nsp=2*n-2*row-1;
- while(row<=n) {
-	 int cst=1;
-	 while(cst<=nst) {
-		 System.out.print(cst);
-		 cst++;
-	 }
-	 int csp=1;
-	 while(csp<=nsp) {
-		 System.out.print(" ");
-		 csp++;
-	 }
-	 cst = row==n?row-1:row;
-	 while(cst>=1) {
-		 System.out.print(cst);
-		 cst--;
-	 }
-	 System.out.println();
-	 nsp-=2;
-	 nst++;
-	 row++;
+System.out.println(conversion(33));
  }
- 
-    }	
+
+    public static int conversion(int oct) {
+ int bin=0;
+ int power=1;
+while(oct!=0) {
+	int rem=oct%10;
+if(rem==0) rem=000;
+if(rem==1) rem=001;
+if(rem==2) rem=010;
+if(rem==3) rem=110;
+if(rem==4) rem=100;
+if(rem==5) rem=101;
+if(rem==6) rem=110;
+if(rem==7) rem=111;
+bin+=rem*power;
+	power=power*1000;
+	oct=oct/10;
 }
+return bin;
+    }
+    
+    }	
+
 
    
