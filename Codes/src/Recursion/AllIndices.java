@@ -7,7 +7,7 @@ static Scanner sc= new Scanner(System.in);
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 int[]values=takeInp();
-int[]res=allindices(values,0,6,0);
+int[]res=allindices(values,0,33,0);
 for(int i=0;i<res.length;i++) {
 System.out.println(res[i]);
 }

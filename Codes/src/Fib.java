@@ -9,7 +9,7 @@ public class Fib {
 	        int a=0;
 	        int b=1;
 	    int sum;
-	    for(int i=1;i<=n;i++){
+	    for(int i=0;i<=n;i++){
 	        System.out.println(a);
 	        sum=a+b;
 	        a=b;

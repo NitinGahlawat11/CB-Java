@@ -1,12 +1,11 @@
-package nitin;
-
+package Recursion;
 import java.util.ArrayList;
 
 public class BoardPath {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-System.out.println(boardpath(0,10).size());
+System.out.println(boardpath(0,10));
 	}
 	public static ArrayList<String> boardpath(int curr,int end){
 		if(curr==end) {
