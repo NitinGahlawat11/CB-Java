@@ -1,0 +1,60 @@
+Clrt +shift+ f to auto format the code
+
+for loop syntax
+int i=1;
+for(;i<=5;i++){}
+
+=================================
+
+This is also valid
+int i=1;
+for(;i<=5;){
+i++
+}
+===============================
+for(;;){
+// This is equal to an infinite loop
+}
+
+============
+for designing patters, follow 3 steps
+1. what are the total no. of rows
+2. which is the work that needs to be done
+3. what is the preparation needed for next rpw
+
+====== for initialisation of nst or nsp set acc. to requirement of row1
+
+
+int a=20; // 20 is the literal
+
+2.13 outputs
+
+
+
+
+
+
+
+
+
+
+arrays only allow us to use fixed size
+
+int[] arr= new int[50];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

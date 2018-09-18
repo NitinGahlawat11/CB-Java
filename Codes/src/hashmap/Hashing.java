@@ -1,5 +1,6 @@
 package hashmap;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,6 +37,13 @@ for(Map.Entry<String, Integer> res:results) {
 System.out.println("-----------------------------max char");
 String str="nitiinnnnn";
 System.out.println(maxfreq(str));
+	
+	System.out.println("------------------intersection");
+	int[]one= {5,11,56,25,29,21};
+	int[]two= {41,22,47,51,11,554,5};
+	ArrayList<Integer> list=intersection(one,two);
+	System.out.println(list);
+	
 	}
 public static char maxfreq(String str) {
 	HashMap<Character, Integer> list= new HashMap<>();
@@ -62,4 +70,25 @@ public static char maxfreq(String str) {
 	}
 	return maxchar;
 }
+
+public static ArrayList<Integer> intersection(int[]one,int[] two){
+	HashMap<Integer, Boolean> map= new HashMap<>();
+	ArrayList<Integer> list= new ArrayList<>();
+	for(int i=0;i<one.length;i++) {
+		map.put(one[i], false);
+	}
+	for(int j=0;j<two.length;j++) {
+		if(map.containsKey(two[j])) {
+		map.put(two[j], true);
+		}
+	}
+	Set<Map.Entry<Integer, Boolean>> entries=map.entrySet();
+	for(Map.Entry<Integer, Boolean> enrty:entries) {
+		if(enrty.getValue()) {
+			list.add(enrty.getKey());
+		}
+	}
+	return list;
+}
+
 }
